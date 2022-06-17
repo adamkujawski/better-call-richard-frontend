@@ -1,8 +1,12 @@
-import React from 'react';
+import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {FaultEntity} from "types";
 
 function App() {
+
+  const [data, setData] = useState<FaultEntity | null>(null)
+
   return (
     <div className="App">
       <header className="App-header">
