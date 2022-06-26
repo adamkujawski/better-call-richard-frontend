@@ -1,26 +1,28 @@
-import React from "react";
+import React, {useState} from "react";
 import "./Header.css";
-import better from "./images/better.png";
-import call from "./images/call.png";
-import richard from "./images/richard.png";
+import better from "../App/images/better.png";
+import call from "../App/images/call.png";
+import richard from "../App/images/richard.png";
+import {ModalFaultForm} from "../ModalFaultForm/ModalFaultForm";
+import {Link} from "react-router-dom";
 
 export const Header = () => {
+
+  const [modalState, setModalState] = useState(false);
+
+  const addFault = () => {
+    setModalState(prev => !prev);
+  }
+
   return (
     <>
-      <div className="hero-img">
-        <div className="hero-shadow"></div>
-        <div className="better-call-richard">
-          <img className="title-better" src={better} alt="title" />
-          <img className="title-call" src={call} alt="title" />
-          <img className="title-richard" src={richard} alt="title" />
-        </div>
         <div className="hero-text">
           <h1>Witaj w Richard Garage</h1>
           <p>Samochody to moja pasja !</p>
-
-          <div className="button button-1">Zgłoś Usterkę!</div>
+          <div className="button button-1" onClick={() => addFault()}>Zgłoś Usterkę!</div>
+          <ModalFaultForm show={modalState}/>
+          <Link to='/richard'>Go to richard</Link>
         </div>
-      </div>
     </>
   );
 };

@@ -1,0 +1,66 @@
+
+
+.modal-container{
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+    border-radius: 25px;
+    position: absolute;
+    width: 75vh;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    z-index: 99;
+
+}
+.modal-container label p{
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.modal-container input{
+    width: 500px;
+    padding: 0.5rem;
+}
+.modal-container select{
+    width: 500px;
+    padding: 0.5rem;
+}
+
+
+.modal-container textarea{
+    min-width: 500px;
+    max-width: 500px;
+    min-height: 100px;
+    max-height: 100px;
+}
+.modal-container .btn-send{
+    display: block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    padding:  0.3rem 1rem;
+    border: 1px solid black;
+    background: none;
+    border-radius: 1rem;
+    margin-top: 1rem;
+
+}
+
+.modal-container .btn-close{
+    border: none;
+    color: #e00404;
+    background: none;
+    font-size: 3rem;
+    font-weight: bold;
+    padding: 2rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    position: absolute;
+    top: 1rem;
+    right: 2.5rem;
+}
