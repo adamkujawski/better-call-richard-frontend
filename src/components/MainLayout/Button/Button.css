@@ -1,0 +1,33 @@
+.button {
+    width: 20rem;
+    text-align: center;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-block;
+    padding: 2rem 5rem;
+    margin-top: 2rem;
+    background-color: transparent;
+    border: 2px solid #e1cd1f;
+    border-radius: 5rem;
+    transition: all .15s ease-in-out;
+    color: #ffffff;
+    margin: 1rem 2rem;
+}
+.button-report, .button-check, .button-login{
+
+}
+
+.button-login{
+    background-color: #e1cd1f;
+}
+.button-check, .button-login{
+    padding: 1rem;
+}
+
+.button:hover{
+    box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;
+    border: 2px solid #00d7c3;
+}
+

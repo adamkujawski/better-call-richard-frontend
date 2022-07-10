@@ -1,0 +1,58 @@
+.hero-img{
+    position: relative;
+    min-height: 100vh;
+    background-image: url("../App/images/background-huge.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    z-index: 0;
+}
+.hero-shadow{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,.5);
+    z-index: -1;
+}
+.hero-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    height: 100vh;
+    z-index: 10;
+    color: white;
+    font-size: 1.6rem;
+}
+.better-call-richard{
+    position: relative;
+    z-index: 10;
+}
+.title-better{
+    position: absolute;
+    top: 10px;
+    left: 25px;
+}
+.title-call{
+    position: absolute;
+    top: 35px;
+    left: 165px;
+}
+.title-richard{
+    position: absolute;
+    top: 75px;
+    left: 25px;
+}
+.menu{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+input {
+    border: 1px solid black;
+}

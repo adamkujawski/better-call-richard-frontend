@@ -1,0 +1,81 @@
+
+.modal-fault-container {
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255, 255, 255);
+    border-radius: 5rem;
+    width: 70rem;
+    height: 75rem;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    color: black;
+    z-index: 99;
+}
+.modal-fault-container h2{
+    padding: 2rem 0;
+}
+.modal-fault-container label{
+    display: inline-block;
+    width: 100%;
+    padding: 0 5rem;
+}
+.modal-fault-container p {
+    text-align: left;
+    font-weight: 700;
+}
+.modal-fault-container input, select{
+    display: inline-block;
+    width: 100%;
+    padding: 0.6rem 1rem;
+}
+.modal-fault-container textarea {
+    width: 100%;
+    height: 9rem;
+    resize: none;
+}
+
+.modal-fault-container .btn-send{
+    display: block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    padding:  0.3rem 1rem;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    box-shadow: 0 3px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    transition: 0.3s;
+    background: #ffffff;
+    text-transform: uppercase;
+    color: #000000;
+    padding: 0.3rem 2rem;
+}
+
+.modal-fault-container .btn-send:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+
+
+.modal-fault-container .btn-close{
+    text-transform: uppercase;
+    border: none;
+    box-shadow: 0 3px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    padding: 0.3rem 2rem;
+    border-radius: 2rem;
+    position: absolute;
+    color: white;
+    background: #e00404;
+    top: 2rem;
+    right: 3rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    flex-direction: column;
+    transition: 0.3s;
+}
+.modal-fault-container .btn-close:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
