@@ -1,46 +1,61 @@
-# Getting Started with Create React App
+## Table of contents
+* [General info](#general-info)
+* [Technologies](#technologies)
+* [Setup](#setup)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## General info
+A platform for reporting mechanical defects. 
 
-## Available Scripts
+Users can report their car to a mechanic, providing their contact information and a description of the car and the defect.
 
-In the project directory, you can run:
+After reporting the defect, the user receives an email about the report. 
 
-### `npm start`
+The mechanic can log in to see the list of defects. 
+He can schedule new defects for a date that suits him, and provide a preliminary repair quote.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+After such an event, the user will receive an email, and can accept the preliminary terms by clicking on the link.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+After the repair, the mechanic can complete the request by editing it.
 
-### `npm test`
+	
+** Unfortunately, the backend part without commits, because I forgot to properly configure the .gitignore :) 
+  
+## Technologies
+* NodeJs
+* TypeScript
+* MySql
+* ExpressJS
+* nodemailer
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+	
+## Setup
+To run this project, install it locally using npm:
 
-### `npm run build`
+Frontend:
+- npm i 
+- run scrtip "start" from package.json
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Backend:
+- npm i 
+- change parameters in /config/config.example.ts and /config/config.nodemailer.example.ts
+- run script start:dev
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## DEMO
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+https://bettercallrichard.networkmanager.pl
 
-### `npm run eject`
+Richard account to login
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- richard@richard.com
+- 1234
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Or you can register your own account by sending json (method post)  https://bettercallrichard.networkmanager.pl/api/test/register 
+This function it is not ready from frontend side.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+json example: 
+{
+  "name": "your_name",
+  "email":"your_email",
+  "password":"your_password",
+}
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
