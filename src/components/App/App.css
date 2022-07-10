@@ -1,10 +1,10 @@
 .hero-img{
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     background-image: url("../App/images/background-huge.jpg");
     background-position: center;
-    background-size: cover;
     background-attachment: fixed;
+    background-size: cover;
     z-index: 0;
 }
 .hero-shadow{
@@ -44,4 +44,15 @@
     position: absolute;
     top: 75px;
     left: 25px;
+}
+.menu{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+input {
+    border: 1px solid black;
 }

@@ -1,4 +1,6 @@
 import React, {SyntheticEvent, useState} from "react";
+import './FaultForm.css'
+import {apiUrl} from "../../../../config/api";
 
 
 export const FaultForm = () => {
@@ -20,7 +22,7 @@ export const FaultForm = () => {
         description: "",
     });
 
-    const updateForm = (key: string, value: any) => {
+    const updateForm = (key: string, value: string | number) => {
         setForm((form) => ({
             ...form,
             [key]: value,
@@ -31,9 +33,9 @@ export const FaultForm = () => {
         e.preventDefault();
 
         setLoading(true);
-
+        console.log(apiUrl)
         try {
-            const res = await fetch("http://localhost:3001/fault", {
+            const res = await fetch(`${apiUrl}/fault`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -66,14 +68,13 @@ export const FaultForm = () => {
     }
 
     if (code){
-        return <h2>Dziękuje! Twoja usterka została dodana z kodem {code}. Za chwilę powinieneś otrzymać wiadomość e-mail</h2>
+        return <h3>Dziękuje! Twoja usterka została dodana z kodem {code}. Za chwilę powinieneś otrzymać wiadomość e-mail</h3>
     }
 
     return (
         <>
-            <form action="" className="fault-form" onSubmit={saveFault}>
-                <h1>Wypełnij Formularz</h1>
-
+            <form action="src/components/MainLayout/ModalFaultForm/FaultForm/FaultForm" className="fault-form" onSubmit={saveFault}>
+                <h2>Wypełnij Formularz Usterki</h2>
                     <label>
                         <p>Imię:</p>
                         <input
@@ -104,6 +105,7 @@ export const FaultForm = () => {
                             type="tel"
                             name="telephone"
                             required
+                            minLength={9}
                             maxLength={11}
                             value={form.telephone}
                             onChange={(e) => updateForm("telephone", e.target.value)}
@@ -152,6 +154,7 @@ export const FaultForm = () => {
                             type="text"
                             name="registration_no"
                             required
+                            minLength={7}
                             maxLength={9}
                             value={form.registration_no}
                             onChange={(e) => updateForm("registration_no", e.target.value)}
